@@ -1,0 +1,6 @@
+NAME         SIZE TYPE MOUNTPOINTS    MODEL
+loop0        986M loop                
+mmcblk0     59.5G disk                
+├─mmcblk0p1  512M part /boot/firmware 
+└─mmcblk0p2   59G part /              
+zram0        986M disk [SWAP]         

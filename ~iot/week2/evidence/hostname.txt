@@ -1,0 +1,7 @@
+ Static hostname: macdonald-pi
+       Icon name: computer
+      Machine ID: 6fc12d21c8c94f0292c8eed03b2a77f9
+         Boot ID: f3457b527275406bb6be212649983218
+Operating System: Debian GNU/Linux 13 (trixie)
+          Kernel: Linux 6.18.50+rpt-rpi-2712
+    Architecture: arm64
