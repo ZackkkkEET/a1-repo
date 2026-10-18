@@ -1,0 +1,16 @@
+WEEK 3 LOG:
+
+BUILT:
+Configure the raspberry pis secured remote access using the SSH key for github, configuring a secure ufw firewall (UFW = uncomplicated), and enabling a VNC connection to dispaly and use the raspberry pi deivce on anothe rdesktop screen.
+
+BROKE: When connection from RealVNC server was trying to be made, it displayed a failed to connect message.
+
+UNDERSTOOD: The UFW firewall was working well, it was trying to deny access from the VNC to my raspberry pi, A minor issue I also learnt on was to properly type each command, as spelling or symbole mistakes where preventing me from completing the lab properly.
+
+EVIDENCE: The UFW status read everything we needed it to be set as; 
+22/TCP ALLOW IN ANYwhere
+5900/TCP ALLOW IN ANYwhere
+22/TCP(V6) ALLOW IN ANYwhere (V6)
+5900/TCP(V6) ALLOW IN ANYwhere (V6)
+
+

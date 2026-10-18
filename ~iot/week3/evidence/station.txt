@@ -1,0 +1,17 @@
+D22116, Raspberry pie5, SSD6
+
+1.
+It is the publix KEy, which allows us to share from raspberry pi to another PC
+
+2.
+The firewall can block our ssh key, so by allowing it before UFW, we ensure that the firewall will not block it
+
+3.
+apt update refreshes the package, while apt full installs these changes and updates
+
+4.
+The SSH key which we linked on our raspberry pi
+
+5.
+VNC is much more usefull if you need a full screen (example using internet webbroswer etc)
+SSH is better for running commands
