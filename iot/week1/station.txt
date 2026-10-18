@@ -1,0 +1,11 @@
+WEEK 1:
+
+BUILT:
+Configure GIT, create /commit/push a file
+
+BROKE: 
+My repo file was not loading in between my git and github
+
+UNDERSTOOD:
+I learnt from doing research and re reading the class notes that I need to push my git "git push" the file to ensure its transfer from git to github repo. Git restore is used to revisit old local repository changes,
+git commit is used to confirm changes to file.
