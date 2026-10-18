@@ -1,0 +1,45 @@
+WEEK 1:
+BUILT: We learnt how to configure GIT, create /commit/push a file to github. This skill is the foundation of the Iot class, and will be used multiple times through the weeks to complete labworks, and assignments.
+BROKE: My repo file was not loading in between my git and github
+UNDERSTOOD: I learnt from doing research and re reading the class notes that I need to push my git "git push" the file to ensure its transfer from git to github repo. Git restore is used to revisit old local repository changes, git commit is used to confirm changes to file.
+
+WEEK 2:
+BUILD: This week, we set up our raspberry pi. We installed the required PI OS (64), named the device accordingly , configuring the connections, then downloading every setting from the imager to a SD card and plugging it into the pi. We also started learning commands in the terminal that will help us through this semester.
+BROKE: Black screen after configuring PI, and plugging it into a desktop screen, Wasnt sure what went wrong as the configuration list was followed line by line, and the raspberry pi kit was built and installed properly into its case.
+UNDERSTOOD: We should not plug the SD card into its adapter, then in a usb port of the PI, the adapter is only to install the software onto the SD card! or delete data off the SD card. This error allowed me to learn how to use the imager better, by downloading the OS onto the SD card, and deleting / wiping the old data clean. I had to wipe the OLD data as I set up the pi at home, without following the required specs and settings. 
+EVIDENCE: We started using commands to create text files, such as hostname, ip, lsblk, os, root device, throttled .txt Everything was provided in the evidence folder of week 2s folder.
+
+WEEK 3:
+BUILT: This week, we configured the raspberry pis’ secured remote access using the SSH key for github. We also configured a secure ufw firewall (UFW = uncomplicated), and enabled a VNC connection to display and use the raspberry pi device on another desktop screen. (not screen share but actually able to edit)
+BROKE: When the connection from the RealVNC server was trying to be made, it displayed a failed to connect message multiple times, without us knowing why. 
+UNDERSTOOD: The UFW firewall was working well, it was trying to deny access from the VNC to my raspberry pi. A minor issue I also learnt on was to properly type each command, as spelling or symbol mistakes were preventing me from completing the lab properly. The real reason the pi couldn't actually connect to the VNC server was that the IP of the pi had to be found, and configured in the server for it to connect successfully. We had to find the IP of the PI based on MAc address, make sure it was the right one, then in the server connection type out the IP address. 
+EVIDENCE: The UFW status read everything we needed it to be set as and was included in the Evidence folder of week3; 
+22/TCP ALLOW IN ANYwhere
+5900/TCP ALLOW IN ANYwhere
+22/TCP(V6) ALLOW IN ANYwhere (V6)
+5900/TCP(V6) ALLOW IN ANYwhere (V6)
+
+WEEK 4:
+BUILT: This week, we started learning about Python 3 commands, and how it can be used, and what for. We ended off at Week 4 Part 2, after seeing function blocks, and math commands.
+BROKE: (Nothing done so far)
+UNDERSTOOD: I understood how to start using Python 3 in the Pi terminal, We used variables such as Delay, blink, name, running, blinks * delay! As well as function blocks, such as 
+IF: If condition true do this
+IF ELSE: If condition not true do this instead
+WHILE: Repeat this as long as X
+FOR: Repeat each for X
+
+
+
+WEEK 5:
+BUILT: This week the course notes were about planning our program before executing it. Just like a blueprint, or flowchart to write down what we want code lines to do. Basically having a testable system, and a list of functional or non functional requirements
+UNDERSTOOD: I understood the process of writing a detailed plan before hand, Pseudocode is a structured english text plan that is turned into a python code, the tracing back to the plan to perhaps catch mistakes being made before running code, also how flowcharts are used and made, the symbol shape and what they do
+EX:
+Oval: Start end
+Rectangle: Do this step
+Diamond: Decision or question
+Offset rectangle: Output/input\
+If everything makes sense, you type it out and test it out.
+
+WEEK 6:
+BUILT: This week the course notes demonstrate us how to :bundle” every line of code together, meaning instead of having messy lines of code, we can shorten the lines and make our workspace a lot cleaner. 
+UNDERSTOOD: I understood the Class vs Object differences, What is an attribute, and what is a method, Special keys used on Python 3 such as self: , How to reorganize the structure of our code without editing/changing it. I'm still having trouble fully understanding these concepts, but with time, practice in the lab, and re reading notes it should feel better about these concepts. 
