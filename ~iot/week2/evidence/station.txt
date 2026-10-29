@@ -1,11 +1,1 @@
-WEEK 2:
-
-BUILD:
-We setup our raspberry pis, flashing the PI OS, naming the device, configuring connections, then downloadin git to a SD card and plugging it into the pi, We also started learning commands.
-
-BROKE: Black screen after configuring PI, and plugging it into a desktop screen, Wasnt sure what went wrong as the configuration list was followed line by line, and raspberry pi kit was built and installed properly into its case.
-
-UNDERSTOOD: Not to plug the SD card into its adpater, in a usb port of the PI, the adapter is only to install, or delet data off the SD card. This error allowed me to learn how to use the imager better, by downloading the OS onto the SD card, and deleting / wipin git clean. 
-
-EVIDENCE: We started suing commands to create text files, such as hostname, ip, lsblk, os, root device, throttled .txt
-
+D22116, Raspberry pie5, SSD4, Zack Macdonald & Zachary Lapointe
