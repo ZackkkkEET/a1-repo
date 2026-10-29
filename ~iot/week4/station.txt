@@ -1,0 +1,17 @@
+1) What does the interpreter do with blink.py, line by line?
+It imports the LED, assigns the BCM pin 17 to the LED, and rusn "for" loop 10 times
+
+2) Why did pip install fail outside the venv, and what made it work inside?
+The OS blocks the pip install, it works in the virtual env because it isolates the pip into a separte folder
+
+3) Recompute the LED current with the resistor from your kit. Is it inside the pin budget?
+3.3V - 2V (led drop) = 1.3V
+1.3V / 330ohm = 0.0039A *1000 = 3.9mA
+Yes, as stated by the 5 rules, the deisgn norm is 8mA and the aboslute MAX we can have is 16mA
+
+4) LED(17): which physical pin is that, and how do you check?
+is the GPIO17, also referd as physical pin 11, you can check by using "pinout" command in terminal prompt, it will show you all 40 pins, their names, and what physical pins they are refered as
+
+5) Polling versus events: which did toggle.py use, and why does it need pause()?
+toggle py used event, and it requires the pause() function to keep running the script, if it wasnt there it would finish and exit
+
