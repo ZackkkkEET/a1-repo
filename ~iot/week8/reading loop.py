@@ -7,3 +7,9 @@ while True:
     volts = raw / 65535 * 3.3
     print(f"raw={raw:5d}   v={volts:.2f}")
     sleep(0.2)
+    
+DARK = 1800        
+BRIGHT = 52000     
+def light_pct(raw):
+    pct = (raw - DARK) / (BRIGHT - DARK) * 100
+    return max(0, min(100, pct))
