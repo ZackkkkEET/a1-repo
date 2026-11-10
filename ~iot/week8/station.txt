@@ -1,0 +1,19 @@
+D22116, Raspberry pie5, SSD4, Zack Macdonald & Zachary Lapointe
+ESP32 
+
+1. Name the one input capability the ESP32 has that the Pi lacks, and the architecture role each machine plays because of it
+The Pi lacks of Analog inputs, and relies on its digital GPIO pins. We use a ESP32 chip to communicate via wifi or bluetooth and use those analog pins.
+
+2. A 12-bit ADC on 3.3 V: step size, shown with the formula.
+SS = Voltage / Steps  SS = 3.3V / 2^12  SS= 3.3V / 4096 = 0.0008056V
+
+3. In our divider, which way does the GPIO34 voltage move when a cloud passes, and why?
+When we connect the LDR to a 3v3 pin, and a resistor to the ground as a setup, and a cloud would pass over, the LDR would pick uop darkness, the resistance increases on the LDR and there for voltage drops on the GPIO34 
+
+4. Why does pwm.duty_u16(adc.read_u16()) need no scaling?
+They are all ready scaled to a 16-bit interger range
+
+5. Open loop versus closed loop, one sentence each, and which one A2 requires.
+Open: Output is generated based on iput
+Closed: Output based on Output
+A2: Assignment 2 requires a closed loop
