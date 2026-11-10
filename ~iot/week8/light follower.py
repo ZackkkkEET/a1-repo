@@ -1,10 +1,9 @@
-from machine import Pin, PWM
+from machine import ADC, Pin, PWM
 from time import sleep
+adc = ADC(Pin(34))
+adc.atten(ADC.ATTN_11DB)
 pwm = PWM(Pin(25), freq=1000)
 while True:
-    for d in range(0, 65536, 1024):      
-        pwm.duty_u16(d)
-        sleep(0.02)
-    for d in range(65535, -1, -1024):    
-        pwm.duty_u16(d)
-        sleep(0.02)
+    raw = adc.read_u16()
+    pwm.duty_u16(raw)            
+    sleep(0.05)
