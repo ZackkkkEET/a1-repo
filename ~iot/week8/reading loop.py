@@ -13,3 +13,9 @@ BRIGHT = 52000
 def light_pct(raw):
     pct = (raw - DARK) / (BRIGHT - DARK) * 100
     return max(0, min(100, pct))
+
+def read_avg(adc, n=16):
+    total = 0
+    for _ in range(n):
+        total += adc.read_u16()
+    return total // n
