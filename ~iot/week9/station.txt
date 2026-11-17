@@ -1,0 +1,28 @@
+D22116, Raspberry pie5, SSD4, Zack Macdonald & Zachary Lapointe
+ESP32 
+
+Journal Reflection:
+Everything that could go wrong went wrong today, for somereason luck wsasnt on our side. Going home, eating dinner and resetting our minds was the best option, everything worked out well, we where able to connect via wifi, and mosquitto reading was working based on LDR values.
+
+
+1. The broker’s job in one sentence, and why the broker never addresses the Pi.
+The MQTT broker receives messages froExit ticket
+m devices and forwards them to clients that subscribe to the correct topics. The broker doesn’t need to address the Pi directly because devices communicate through topics instead of sending messages to specific IP addresses.
+
+2. Your station’s three topics, and what bench/+/light matches that bench/#/light does not.
+Our station uses three MQTT topics to organize its messages and telemetry. The + wildcard matches exactly one level in a topic, while # matches multiple levels (including zero levels) and must be at the end of the topic.
+For example:
+bench/s04/light matches bench/+/light.
+bench/s04/sensor/light does not match bench/+/light.
+bench/s04/sensor/light matches bench/#.
+
+3. Why sudo ufw allow 1883 was necessary, in Week 3’s own words.
+This command was necessary because port 1883 is the default MQTT port. Allowing it through the firewall lets other devices connect to the MQTT broker and exchange messages with the Raspberry Pi.
+
+4. QoS 0 versus QoS 1, and which this week’s telemetry uses, with the reason.
+QoS 0 sends a message once without confirming that it was received. QoS 1 makes sure the message arrives by requiring an acknowledgement, but duplicates are possible. QoS 0 is useful for frequent sensor readings where losing an occasional update is acceptable.
+Check your actual telemetry configuration before submitting the QoS 0 part; the screenshot doesn’t specify which one your setup uses.
+
+5. Why config.py is git-ignored while config.example.py is committed.
+config.py contains personal settings or sensitive information that should not be uploaded to GitHub. config.example.py is committed because it provides a template that other people can copy and fill in with their own settings.
+One thing to double-check for question 2: I don’t have your station’s exact three topic names from this handout. Also, in standard MQTT, bench/#/light is invalid because # must be the last character in a topic filter. bench/+/light matches exactly one level between bench and light.
