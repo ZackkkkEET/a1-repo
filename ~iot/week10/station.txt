@@ -1,0 +1,32 @@
+D22116, Raspberry pie5, SSD4, Zack Macdonald & Zachary Lapointe
+ESP32 
+
+Journal Reflection:
+Lab went well in general some silly mistakes, easily fixed. Data collection went smoothly, we had trouble with overshoot, an dwobble/unstable data but it was easily fixed by troubleshooitng and re trying the setups. 
+
+Exit ticket:
+1) The closed-loop diagram's signals, on a napkin sketch, mapped to your bench
+-SP (SET POINT) 50%
+-PV (PROCESS VALUE) GPIO 34 LDR
+-ERROR = SP -PV
+-PID (controller) 0-100
+-ACTUATOR GPIO 25 LED
+Sp -> error -> controller -> LED -> LDR -> PV
+
+2) Why P alone parks short of the setpoint, with the ess formula's shape.
+To hold the LED at a level that we need. U is nonzero there for Kp x error will equal input needed. The bigger Kp is the smaller value.
+
+3) What windup is, what provokes it, and the one-line cure your class ships.
+Windup is an integral that keeps the accumulation while poutput is capped of at it slimit.
+It is provoked when setpoit Sp is unrechable
+We only need it when SP is not saturated
+
+4) Your final gains, and which trial in your log earned each of them.
+KP = 0.05
+KI = 0.8
+KD = 0
+
+The final run after trail and error got the most accuaret data.
+
+5) Where control should live on your bench and in your project, in the fast-local, supervisory-central sentence.
+We should put everything time critical in the project and decisions on Pi
